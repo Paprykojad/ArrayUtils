@@ -1,0 +1,15 @@
+// .vscode/launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Main",
+      "type": "codelldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/Main/main",
+      "cwd": "${workspaceFolder}/build/Main",
+      "stopOnEntry": false,
+      "args": []
+    }
+  ]
+}

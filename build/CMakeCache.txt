@@ -28,7 +28,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -54,7 +54,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -225,7 +225,7 @@ Main_IS_TOP_LEVEL:STATIC=OFF
 Main_SOURCE_DIR:STATIC=/home/fg/kody/ArrayUtils/Main
 
 //Value Computed by CMake
-RingBuffer_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/Main/RingBuffer_build
+RingBuffer_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/RingBuffer
 
 //Value Computed by CMake
 RingBuffer_IS_TOP_LEVEL:STATIC=OFF
@@ -234,7 +234,7 @@ RingBuffer_IS_TOP_LEVEL:STATIC=OFF
 RingBuffer_SOURCE_DIR:STATIC=/home/fg/kody/ArrayUtils/RingBuffer
 
 //Value Computed by CMake
-Slice_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/Main/Slice_build
+Slice_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/Slice
 
 //Value Computed by CMake
 Slice_IS_TOP_LEVEL:STATIC=OFF
@@ -243,16 +243,16 @@ Slice_IS_TOP_LEVEL:STATIC=OFF
 Slice_SOURCE_DIR:STATIC=/home/fg/kody/ArrayUtils/Slice
 
 //Value Computed by CMake
-StackArray_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/Main/HeapArray_build
+StackArray_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/StackArray
 
 //Value Computed by CMake
 StackArray_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-StackArray_SOURCE_DIR:STATIC=/home/fg/kody/ArrayUtils/HeapArray
+StackArray_SOURCE_DIR:STATIC=/home/fg/kody/ArrayUtils/StackArray
 
 //Value Computed by CMake
-SwapbackArray_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/Main/SwapbackArray_build
+SwapbackArray_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/SwapbackArray
 
 //Value Computed by CMake
 SwapbackArray_IS_TOP_LEVEL:STATIC=OFF
@@ -283,9 +283,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/fg/kody/ArrayUtils/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=28
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=25
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -374,7 +374,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -386,7 +386,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.28
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.25
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG

@@ -7,18 +7,12 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_Release "-O3")
 set(CMAKE_BUILD_TYPE Debug)
 
-if (NOT TARGET SwapbackArray)
-    add_subdirectory(../SwapbackArray SwapbackArray_build)
-endif()
-if (NOT TARGET StackArray)
-    add_subdirectory(../StackArray StackArray_build)
-endif()
-if (NOT TARGET HeapArray)
-    add_subdirectory(../HeapArray HeapArray_build)
-endif()
-if (NOT TARGET RingBuffer)
-    add_subdirectory(../RingBuffer RingBuffer_build)
-endif()
-if (NOT TARGET Slice)
-    add_subdirectory(../Slice Slice_build)
-endif()
+add_executable(main main.c)
+
+target_link_libraries(main PRIVATE 
+    StackArray
+    # SwapbackArray
+    # HeapArray
+    # RingBuffer
+    # Slice
+)

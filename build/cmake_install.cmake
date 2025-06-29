@@ -44,12 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/fg/kody/ArrayUtils/build/SwapbackArray/cmake_install.cmake")
-  include("/home/fg/kody/ArrayUtils/build/StackArray/cmake_install.cmake")
-  include("/home/fg/kody/ArrayUtils/build/HeapArray/cmake_install.cmake")
-  include("/home/fg/kody/ArrayUtils/build/RingBuffer/cmake_install.cmake")
-  include("/home/fg/kody/ArrayUtils/build/Slice/cmake_install.cmake")
   include("/home/fg/kody/ArrayUtils/build/Main/cmake_install.cmake")
+  include("/home/fg/kody/ArrayUtils/build/StackArray/cmake_install.cmake")
 
 endif()
 

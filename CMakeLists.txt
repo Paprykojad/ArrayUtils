@@ -7,9 +7,14 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_Release "-O3")
 set(CMAKE_BUILD_TYPE Debug)
 
-add_subdirectory(SwapbackArray)
-add_subdirectory(StackArray)
-add_subdirectory(HeapArray)
-add_subdirectory(RingBuffer)
-add_subdirectory(Slice)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror")
+
 add_subdirectory(Main)
+add_subdirectory(StackArray)
+
+target_include_directories(main PRIVATE ${CMAKE_HOME_DIRECTORY})
+
+# add_subdirectory(SwapbackArray)
+# add_subdirectory(HeapArray)
+# add_subdirectory(RingBuffer)
+# add_subdirectory(Slice)

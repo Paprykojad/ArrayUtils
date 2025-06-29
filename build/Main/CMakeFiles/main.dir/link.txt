@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Werror -g CMakeFiles/main.dir/main.c.o -o main  ../StackArray/libStackArray.a 

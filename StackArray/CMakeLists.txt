@@ -7,3 +7,6 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_Release "-O3")
 set(CMAKE_BUILD_TYPE Debug)
 
+add_library(StackArray STATIC StackArray.c)
+
+target_include_directories(StackArray PRIVATE ${CMAKE_HOME_DIRECTORY}/)
