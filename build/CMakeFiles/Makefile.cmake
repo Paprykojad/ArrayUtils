@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/fg/kody/ArrayUtils/CMakeLists.txt"
   "/home/fg/kody/ArrayUtils/Main/CMakeLists.txt"
   "/home/fg/kody/ArrayUtils/StackArray/CMakeLists.txt"
+  "/home/fg/kody/ArrayUtils/Tests/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
@@ -42,12 +43,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Main/CMakeFiles/CMakeDirectoryInformation.cmake"
   "StackArray/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "Tests/CMakeFiles/tests.dir/DependInfo.cmake"
   "Main/CMakeFiles/main.dir/DependInfo.cmake"
   "StackArray/CMakeFiles/StackArray.dir/DependInfo.cmake"
   )

@@ -261,6 +261,15 @@ SwapbackArray_IS_TOP_LEVEL:STATIC=OFF
 SwapbackArray_SOURCE_DIR:STATIC=/home/fg/kody/ArrayUtils/SwapbackArray
 
 //Value Computed by CMake
+Tests_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build/Tests
+
+//Value Computed by CMake
+Tests_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Tests_SOURCE_DIR:STATIC=/home/fg/kody/ArrayUtils/Tests
+
+//Value Computed by CMake
 Utils_BINARY_DIR:STATIC=/home/fg/kody/ArrayUtils/build
 
 //Value Computed by CMake
@@ -374,7 +383,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -63,16 +63,19 @@ CMAKE_BINARY_DIR = /home/fg/kody/ArrayUtils/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: Tests/all
 all: Main/all
 all: StackArray/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: Tests/preinstall
 preinstall: Main/preinstall
 preinstall: StackArray/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: Tests/clean
 clean: Main/clean
 clean: StackArray/clean
 .PHONY : clean
@@ -106,6 +109,47 @@ StackArray/preinstall:
 # Recursive "clean" directory target.
 StackArray/clean: StackArray/CMakeFiles/StackArray.dir/clean
 .PHONY : StackArray/clean
+
+#=============================================================================
+# Directory level rules for directory Tests
+
+# Recursive "all" directory target.
+Tests/all: Tests/CMakeFiles/tests.dir/all
+.PHONY : Tests/all
+
+# Recursive "preinstall" directory target.
+Tests/preinstall:
+.PHONY : Tests/preinstall
+
+# Recursive "clean" directory target.
+Tests/clean: Tests/CMakeFiles/tests.dir/clean
+.PHONY : Tests/clean
+
+#=============================================================================
+# Target rules for target Tests/CMakeFiles/tests.dir
+
+# All Build rule for target.
+Tests/CMakeFiles/tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/tests.dir/build.make Tests/CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/tests.dir/build.make Tests/CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/fg/kody/ArrayUtils/build/CMakeFiles --progress-num=5,6 "Built target tests"
+.PHONY : Tests/CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+Tests/CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fg/kody/ArrayUtils/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fg/kody/ArrayUtils/build/CMakeFiles 0
+.PHONY : Tests/CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: Tests/CMakeFiles/tests.dir/rule
+.PHONY : tests
+
+# clean rule for target.
+Tests/CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/tests.dir/build.make Tests/CMakeFiles/tests.dir/clean
+.PHONY : Tests/CMakeFiles/tests.dir/clean
 
 #=============================================================================
 # Target rules for target Main/CMakeFiles/main.dir

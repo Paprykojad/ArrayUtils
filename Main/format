@@ -1,0 +1,4 @@
+rm main.i
+gcc -E -I../ main.c -o main.i
+clang-format -i main.i
+nvim main.i

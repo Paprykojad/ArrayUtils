@@ -3,7 +3,7 @@
 #include <headers/aliases.h>
 
 DEFINE_STACK_ARRAY(u32)
-
+DEFINE_STACK_ARRAY(i32)
 
 int main() {
     printf("no siema\n");

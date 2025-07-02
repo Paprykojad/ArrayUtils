@@ -1,5 +1,8 @@
 /home/fg/kody/ArrayUtils/build/CMakeFiles/edit_cache.dir
 /home/fg/kody/ArrayUtils/build/CMakeFiles/rebuild_cache.dir
+/home/fg/kody/ArrayUtils/build/Tests/CMakeFiles/tests.dir
+/home/fg/kody/ArrayUtils/build/Tests/CMakeFiles/edit_cache.dir
+/home/fg/kody/ArrayUtils/build/Tests/CMakeFiles/rebuild_cache.dir
 /home/fg/kody/ArrayUtils/build/Main/CMakeFiles/main.dir
 /home/fg/kody/ArrayUtils/build/Main/CMakeFiles/edit_cache.dir
 /home/fg/kody/ArrayUtils/build/Main/CMakeFiles/rebuild_cache.dir

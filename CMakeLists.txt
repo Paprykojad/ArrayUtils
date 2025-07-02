@@ -9,6 +9,7 @@ set(CMAKE_BUILD_TYPE Debug)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror")
 
+add_subdirectory(Tests)
 add_subdirectory(Main)
 add_subdirectory(StackArray)
 

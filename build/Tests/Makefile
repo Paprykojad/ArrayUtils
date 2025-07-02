@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fg/kody/ArrayUtils/build/CMakeFiles /home/fg/kody/ArrayUtils/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/fg/kody/ArrayUtils/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fg/kody/ArrayUtils/build/CMakeFiles /home/fg/kody/ArrayUtils/build/Tests//CMakeFiles/progress.marks
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fg/kody/ArrayUtils/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,57 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fg/kody/ArrayUtils/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named tests
+# Convenience name for target.
+Tests/CMakeFiles/tests.dir/rule:
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/CMakeFiles/tests.dir/rule
+.PHONY : Tests/CMakeFiles/tests.dir/rule
 
-# Build rule for target.
-tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+# Convenience name for target.
+tests: Tests/CMakeFiles/tests.dir/rule
 .PHONY : tests
 
 # fast build rule for target.
 tests/fast:
-	$(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/tests.dir/build.make Tests/CMakeFiles/tests.dir/build
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/tests.dir/build.make Tests/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
-#=============================================================================
-# Target rules for targets named main
+tests.o: tests.c.o
+.PHONY : tests.o
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# target to build an object file
+tests.c.o:
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/tests.dir/build.make Tests/CMakeFiles/tests.dir/tests.c.o
+.PHONY : tests.c.o
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f Main/CMakeFiles/main.dir/build.make Main/CMakeFiles/main.dir/build
-.PHONY : main/fast
+tests.i: tests.c.i
+.PHONY : tests.i
 
-#=============================================================================
-# Target rules for targets named StackArray
+# target to preprocess a source file
+tests.c.i:
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/tests.dir/build.make Tests/CMakeFiles/tests.dir/tests.c.i
+.PHONY : tests.c.i
 
-# Build rule for target.
-StackArray: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 StackArray
-.PHONY : StackArray
+tests.s: tests.c.s
+.PHONY : tests.s
 
-# fast build rule for target.
-StackArray/fast:
-	$(MAKE) $(MAKESILENT) -f StackArray/CMakeFiles/StackArray.dir/build.make StackArray/CMakeFiles/StackArray.dir/build
-.PHONY : StackArray/fast
+# target to generate assembly for a file
+tests.c.s:
+	cd /home/fg/kody/ArrayUtils/build && $(MAKE) $(MAKESILENT) -f Tests/CMakeFiles/tests.dir/build.make Tests/CMakeFiles/tests.dir/tests.c.s
+.PHONY : tests.c.s
 
 # Help Target
 help:
@@ -163,9 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... StackArray"
-	@echo "... main"
 	@echo "... tests"
+	@echo "... tests.o"
+	@echo "... tests.i"
+	@echo "... tests.s"
 .PHONY : help
 
 
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fg/kody/ArrayUtils/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

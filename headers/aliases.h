@@ -19,7 +19,10 @@ typedef double    f64;
 
 typedef enum {
     OK,
-    OUT_OF_RANGE
+    OUT_OF_RANGE,
+    NULL_POINTER,
+    OUT_OF_MEMORY,
+    EMPTY_ARRAY
 } Error;
 
 #define DEFINE_NEW(TYPE) \

@@ -1,5 +1,11 @@
 [
 {
+  "directory": "/home/fg/kody/ArrayUtils/build/Tests",
+  "command": "/usr/bin/cc    -Wall -Werror -g -std=gnu11 -o CMakeFiles/tests.dir/tests.c.o -c /home/fg/kody/ArrayUtils/Tests/tests.c",
+  "file": "/home/fg/kody/ArrayUtils/Tests/tests.c",
+  "output": "Tests/CMakeFiles/tests.dir/tests.c.o"
+},
+{
   "directory": "/home/fg/kody/ArrayUtils/build/Main",
   "command": "/usr/bin/cc  -I/home/fg/kody/ArrayUtils  -Wall -Werror -g -std=gnu11 -o CMakeFiles/main.dir/main.c.o -c /home/fg/kody/ArrayUtils/Main/main.c",
   "file": "/home/fg/kody/ArrayUtils/Main/main.c",
