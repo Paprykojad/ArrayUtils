@@ -1,7 +1,9 @@
 #pragma once
 
 #include <headers/aliases.h>
+#include <signal.h>
 
+// #ifndef DEFINE_STACK_ARRAY
 #define DEFINE_STACK_ARRAY(TYPE) \
     typedef struct { \
         TYPE val; \
@@ -16,7 +18,22 @@
         Error (*set)(struct TYPE##Sarr_t* self, u32 idx, TYPE data); \
         Error (*push)(struct TYPE##Sarr_t* self, TYPE data); \
         Error (*pop)(struct TYPE##Sarr_t* self); \
-    } TYPE##Sarr;
+    } TYPE##Sarr; \
+        \
+    TYPE##Return TYPE##Get(struct TYPE##Sarr_t* self, TYPE idx) { \
+        if (idx < 0 || idx >= self->len) { \
+            raise(SIGTRAP); \
+            return (TYPE##Return){ \
+                .err = OUT_OF_RANGE \
+            }; \
+        } else { \
+            return (TYPE##Return) { \
+                .val = self->data[idx], \
+                .err = OK \
+            }; \
+        } \
+    }
+// #endif
 
 
 
@@ -25,6 +42,7 @@
     TYPE##Sarr NAME = { \
         .data = NAME##Data, \
         .len = LEN, \
-        .cap = CAP \
+        .cap = CAP, \
+        .get = TYPE##Get \
     };
     
