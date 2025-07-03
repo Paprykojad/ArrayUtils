@@ -1,2 +1,0 @@
-/usr/bin/ar qc libStackArray.a CMakeFiles/StackArray.dir/StackArray.c.o
-/usr/bin/ranlib libStackArray.a

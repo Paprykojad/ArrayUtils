@@ -10,9 +10,12 @@ set(CMAKE_BUILD_TYPE Debug)
 add_executable(tests tests.c)
 
 target_link_libraries(tests PRIVATE 
+    cmocka
     # StackArray
     # SwapbackArray
     # HeapArray
     # RingBuffer
     # Slice
 )
+
+

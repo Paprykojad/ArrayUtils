@@ -7,7 +7,7 @@ DEFINE_STACK_ARRAY(i32)
 
 int main() {
     printf("no siema\n");
-    STACK_ARRAY_CONSTRUCTOR(u32, myarr, 2, 4)
+    STACK_ARRAY_CONSTRUCTOR(u32, myarr, 3, 4)
 
     u32Return ret = myarr.get(&myarr, 0);
 
@@ -42,7 +42,7 @@ int main() {
 
 
 
-    STACK_ARRAY_CONSTRUCTOR(i32, intarr, 2, 4)
+    STACK_ARRAY_CONSTRUCTOR(i32, intarr, 3, 4)
 
     i32Return ret2 = intarr.get(&intarr, 0);
 
@@ -71,7 +71,4 @@ int main() {
     } else {
         printf("Value: %d\n", ret2.val);
     }
-
-
-
 }

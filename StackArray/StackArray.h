@@ -2,7 +2,6 @@
 
 #include <headers/aliases.h>
 #include <signal.h>
-#include <sys/types.h>
 
 #ifndef DEFINE_STACK_ARRAY
 #define DEFINE_STACK_ARRAY(TYPE) \
@@ -65,11 +64,11 @@
         } \
     } \
     Error TYPE##Pop(struct TYPE##Sarr_t* self) { \
-        if (self->size <= 0) { \
+        if (self->len <= 0) { \
             raise(SIGTRAP); \
             return EMPTY_ARRAY; \
         } else { \
-            self->size--; \
+            self->len--; \
             return OK; \
         } \
     }
@@ -84,7 +83,7 @@
         .len = LEN, \
         .cap = CAP, \
         .get = TYPE##Get, \
-        .push = TYPE##Push \
+        .push = TYPE##Push, \
         .pop = TYPE##Pop \
     };
     
